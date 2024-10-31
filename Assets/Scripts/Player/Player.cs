@@ -4,44 +4,25 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
+    public static Player Instance { get; private set; }
     PlayerMovement playerMovement;
     Animator animator;
 
-    // Static instance of the Player class
-    public static Player Instance { get; private set; }
-
-    private void Awake()
-    {
-        // Check if an instance already exists
-        if (Instance == null)
-        {
-            // If not, set this object as the instance
-            Instance = this;
-            // Make sure the instance is not destroyed on scene load
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            // Destroy any additional instances
-            Destroy(gameObject);
-        }
+    private void Awake(){
+        if (Instance == null) Instance = this;
+        else Destroy(gameObject);
     }
 
-    void Start()
-    {
+    void Start(){
         playerMovement = GetComponent<PlayerMovement>();
-        GameObject engineEffect = GameObject.Find("EngineEffect");
-        animator = engineEffect.GetComponent<Animator>();
+        animator = GameObject.Find("EngineEffect").GetComponent<Animator>();
     }
 
-    void FixedUpdate()
-    {
+    void FixedUpdate(){
         playerMovement.Move();
     }
 
-    void LateUpdate()
-    {
+    void LateUpdate(){
         animator.SetBool("IsMoving", playerMovement.IsMoving());
     }
 }
