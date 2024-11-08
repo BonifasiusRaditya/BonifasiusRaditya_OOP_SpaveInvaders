@@ -17,8 +17,8 @@ public class WeaponPickup : MonoBehaviour
         if(!other.CompareTag("Player") || weapon == null) return;
         Debug.Log("Weapon has ben picked up");
 
-        Weapon currentWeapon = other.GetComponentInChildren<Weapon>();
-        if (currentWeapon != null) currentWeapon.gameObject.SetActive(false);
+        Weapon PickUpWeapon = other.GetComponentInChildren<Weapon>();
+        if (PickUpWeapon != null) PickUpWeapon.gameObject.SetActive(false);
 
         Weapon newWeapon = Instantiate(weapon, other.transform.position, Quaternion.identity);
         newWeapon.transform.SetParent(other.transform);
