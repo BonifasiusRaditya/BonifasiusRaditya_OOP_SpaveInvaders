@@ -9,7 +9,10 @@ public class Player : MonoBehaviour
     Animator animator;
 
     private void Awake(){
-        if (Instance == null) Instance = this;
+        if (Instance == null){
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
         else Destroy(gameObject);
     }
 
@@ -20,6 +23,7 @@ public class Player : MonoBehaviour
 
     void FixedUpdate(){
         playerMovement.Move();
+        playerMovement.MoveBound();
     }
 
     void LateUpdate(){

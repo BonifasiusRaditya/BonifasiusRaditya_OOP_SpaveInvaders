@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ChooseWeapon.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Main.unity
+    guid: a8d6c01c3af9e4008ad2c6646307b26e
   m_configObjects: {}
