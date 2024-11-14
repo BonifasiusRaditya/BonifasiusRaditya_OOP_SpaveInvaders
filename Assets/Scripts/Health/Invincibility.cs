@@ -22,11 +22,20 @@ public class InvincibilityComponent : MonoBehaviour
     }
     
     private void OnTriggerEnter2D(Collider2D collision){
-        if (collision.gameObject.tag == gameObject.tag)
-            return;
-        Debug.Log("InvincibilityComponent OnTriggerEnter2D");
-        isInvincible = true;
-        if(isInvincible) StartCoroutine(BlinkingEffect());
+        if(gameObject.tag == "Player"){
+            if (collision.gameObject.tag == gameObject.tag || collision.gameObject.tag != "Enemy")
+                return;
+            Debug.Log("InvincibilityComponent OnTriggerEnter2D");
+            isInvincible = true;
+            if(isInvincible) StartCoroutine(BlinkingEffect());
+        }
+        else{
+            if (collision.gameObject.tag == gameObject.tag)
+                return;
+            Debug.Log("InvincibilityComponent OnTriggerEnter2D");
+            isInvincible = true;
+            if(isInvincible) StartCoroutine(BlinkingEffect());
+        }
     }
 
     private IEnumerator BlinkingEffect(){

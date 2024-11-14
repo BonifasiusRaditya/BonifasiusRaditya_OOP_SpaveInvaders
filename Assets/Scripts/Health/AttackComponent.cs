@@ -18,13 +18,9 @@ public class AttackComponent : MonoBehaviour
     {
      
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        // Jika objek yang bertabrakan memiliki tag yang sama, hentikan eksekusi
+    private void OnTriggerEnter2D(Collider2D collision){
         if (collision.gameObject.tag == gameObject.tag)
             return;
-
-        // Cek apakah objek yang bertabrakan memiliki komponen Hitbox
         HitboxComponent hitbox = collision.GetComponent<HitboxComponent>();
         if (hitbox != null){
             hitbox.Damage(damage);
