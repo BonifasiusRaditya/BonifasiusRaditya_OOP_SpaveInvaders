@@ -30,8 +30,7 @@ public class CombatManager : MonoBehaviour
         }
     }
 
-
-    public void OnEnemyKilled(){
+    public void getKilled(){
         totalEnemies--;
     }
 }

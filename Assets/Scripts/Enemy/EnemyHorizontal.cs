@@ -22,7 +22,7 @@ public class EnemyHorizontal : Enemy
     void getKilled(){
         if(GetComponent<HitboxComponent>().health.Health <= 5){
             spawner.getKilled();
-            combatmanager.OnEnemyKilled();
+            combatmanager.totalEnemies--;
         }
     }
 }
