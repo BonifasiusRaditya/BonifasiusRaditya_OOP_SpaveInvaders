@@ -5,7 +5,7 @@ using UnityEngine;
 public class HealthComponent : MonoBehaviour
 {
     public int maxHealth;
-    int Health; 
+    public int Health; 
     
     int getHealth(){
         return Health;
@@ -16,7 +16,7 @@ public class HealthComponent : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start(){
+    public void Start(){
         Health = maxHealth;
     }
 

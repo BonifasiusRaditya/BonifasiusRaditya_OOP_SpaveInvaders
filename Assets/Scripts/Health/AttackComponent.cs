@@ -19,11 +19,10 @@ public class AttackComponent : MonoBehaviour
      
     }
     private void OnTriggerEnter2D(Collider2D collision){
-        if (collision.gameObject.tag == gameObject.tag || gameObject.tag == "Bullet")
-            return;
+        if (collision.gameObject.tag == gameObject.tag) return;
         HitboxComponent hitbox = collision.GetComponent<HitboxComponent>();
-        if (hitbox != null){
-            hitbox.Damage(damage);
+            if (hitbox != null){
+                hitbox.Damage(damage);
         }
     }
 }

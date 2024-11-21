@@ -4,27 +4,14 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public GameObject prefab;
+    public int level;
     public int option;
-    public float spawnDelay = 2f;
+    public CombatManager combatmanager;
+    public EnemySpawner spawner;
+
     void Start(){
         //Invoke ("SpawnEnemy", spawnDelay);
     }
-
-    /*void Awake(){
-        InvincibilityComponent invincibilityComponent = GetComponent<InvincibilityComponent>();
-        if (invincibilityComponent == null){
-            invincibilityComponent = gameObject.AddComponent<InvincibilityComponent>();
-        }
-
-        Material enemyFlashMaterial = Resources.Load<Material>("EnemyFlashMaterial");
-        if (enemyFlashMaterial != null){
-            invincibilityComponent.SetBlinkMaterial(enemyFlashMaterial);
-        }
-        else{
-            Debug.LogWarning("EnemyFlashMaterial nggak ketemu. Pastikan material ada di folder Resources.");
-        }
-    }*/
 
     // Update is called once per frame
     void Update(){

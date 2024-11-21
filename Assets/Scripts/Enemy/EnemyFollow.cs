@@ -7,10 +7,10 @@ public class EnemyFollow : Enemy
     public float speed = 2f; // Speed at which the enemy follows the player
 
     void Start(){
+        level = 2;
     }
 
-    void Update()
-    {
+    public void Update(){
         GameObject player = GameObject.Find("Player");
         if (player != null){
             distance = Vector2.Distance(transform.position, player.transform.position);
@@ -18,12 +18,13 @@ public class EnemyFollow : Enemy
             direction.Normalize();
             if (distance < distanceBetween) transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
         }
+        getKilled();
     }
 
-    void selfDestruct(){
-        Vector2 min = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
-        if(transform.position.x < min.x){
-            Destroy(gameObject);
+    void getKilled(){
+        if(GetComponent<HitboxComponent>().health.Health <= 5){
+            spawner.getKilled();
+            combatmanager.OnEnemyKilled();
         }
     }
 }

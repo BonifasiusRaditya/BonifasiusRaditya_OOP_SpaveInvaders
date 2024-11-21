@@ -877,7 +877,6 @@ GameObject:
   - component: {fileID: 1109420415}
   - component: {fileID: 1109420416}
   - component: {fileID: 1109420418}
-  - component: {fileID: 1109420417}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1029,22 +1028,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 1109420415}
---- !u!114 &1109420417
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1109420408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d3f90a737698466197fbf8e8dd985e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blinkingCount: 3
-  blinkInterval: 0.1
-  blinkMaterial: {fileID: 2100000, guid: b55f686afedb7445fa76bb0075ffe647, type: 2}
-  isInvincible: 0
 --- !u!212 &1109420418
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1530,9 +1513,12 @@ GameObject:
   m_Component:
   - component: {fileID: 2063539101}
   - component: {fileID: 2063539102}
+  - component: {fileID: 2063539104}
+  - component: {fileID: 2063539103}
+  - component: {fileID: 2063539105}
   m_Layer: 0
   m_Name: Ship
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1604,6 +1590,70 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2063539103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063539100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d3f90a737698466197fbf8e8dd985e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blinkingCount: 3
+  blinkInterval: 0.1
+  blinkMaterial: {fileID: 2100000, guid: b55f686afedb7445fa76bb0075ffe647, type: 2}
+  isInvincible: 0
+--- !u!114 &2063539104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063539100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecb12bcb135804bf8908078946f1ad95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 0}
+--- !u!70 &2063539105
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063539100}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.33333334}
+  m_Size: {x: 0.41666666, y: 0.3611111}
+  m_Direction: 0
 --- !u!1 &2092037350
 GameObject:
   m_ObjectHideFlags: 0

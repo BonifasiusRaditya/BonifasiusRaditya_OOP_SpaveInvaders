@@ -12,7 +12,6 @@ public class HitboxComponent : MonoBehaviour
         GetComponent<Collider2D>().isTrigger = true;
     }
 
-    //memiliki dua method Damage (overloading) yang berguna untuk mengurangi nilai HealthComponent. Satu method menerima Bullet dan yang lain menerima integer
     public void Damage(Bullet bullet){
         health.subtractHealth(bullet.damage);
     }

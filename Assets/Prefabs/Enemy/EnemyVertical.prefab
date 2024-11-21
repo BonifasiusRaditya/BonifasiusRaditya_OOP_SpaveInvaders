@@ -130,10 +130,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ea79feaf1ecc40a493d80630c6edfe0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  level: 0
   option: 2
-  spawnDelay: 2
-  speed: 2
+  combatmanager: {fileID: 0}
+  spawner: {fileID: 0}
+  speed: 1
 --- !u!114 &-1092221475384877118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,6 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  Health: 100
 --- !u!114 &-8896938819437607778
 MonoBehaviour:
   m_ObjectHideFlags: 0

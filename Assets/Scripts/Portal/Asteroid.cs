@@ -29,7 +29,7 @@ public class Asteroid : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other){
-        if (other.CompareTag("Player")){
+        if (other.CompareTag("Player") && other.GetComponentInChildren<Weapon>() != null){
             Debug.Log("Next Level");
             if (GameManager.Instance != null && GameManager.Instance.LevelManager != null) GameManager.Instance.LevelManager.LoadScene("Main");
         }

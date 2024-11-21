@@ -131,9 +131,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05a015b755a314e7d8b4a560d454a21e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1026374558734910652}
-  option: 0
-  spawnDelay: 2
+  level: 3
+  option: 4
+  combatmanager: {fileID: 0}
+  spawner: {fileID: 0}
   speed: 2
 --- !u!114 &-7270581758603703967
 MonoBehaviour:
@@ -189,6 +190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 300
+  Health: 300
 --- !u!70 &5371763174784620648
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

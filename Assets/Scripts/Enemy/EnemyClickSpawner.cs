@@ -23,8 +23,7 @@ public class EnemyClickSpawner : MonoBehaviour
         }
 
 
-        if(Input.GetMouseButtonDown(1))
-        {
+        if(Input.GetMouseButtonDown(1)){
             SpawnEnemy();
         }
     }
@@ -32,7 +31,6 @@ public class EnemyClickSpawner : MonoBehaviour
     private void SpawnEnemy(){
         if (selectedVariant < enemyVariants.Length){
             Instantiate(enemyVariants[selectedVariant]);
-            //set position random
             Vector2 min = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
             Vector2 max = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));
             enemyVariants[selectedVariant].transform.position = new Vector2(Random.Range(min.x + (max.x - min.x) / 2, max.x), Random.Range(min.y + (max.y - min.y) / 2, max.y));

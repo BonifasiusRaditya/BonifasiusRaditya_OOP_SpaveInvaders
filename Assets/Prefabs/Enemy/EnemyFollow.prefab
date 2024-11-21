@@ -130,9 +130,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2297331ea42b347b09ef57da8d471200, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1026374558734910652}
   option: 3
   spawnDelay: 2
+  level: 2
+  combatmanager: {fileID: 0}
+  spawner: {fileID: 0}
   distanceBetween: 20
   speed: 2
 --- !u!114 &-1900242346577333854
