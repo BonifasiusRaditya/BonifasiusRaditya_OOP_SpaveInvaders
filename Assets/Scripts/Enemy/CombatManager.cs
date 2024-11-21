@@ -26,7 +26,7 @@ public class CombatManager : MonoBehaviour
         waveNumber++;
         totalEnemies = 0;
         foreach(EnemySpawner spawner in enemySpawners){
-            spawner.StartSpawning();
+            spawner.Begin();
         }
     }
 
