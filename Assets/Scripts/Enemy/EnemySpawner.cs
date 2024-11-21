@@ -60,6 +60,7 @@ public class EnemySpawner : MonoBehaviour
     public void getKilled(){
         totalKill++;
         if(totalKill == minimumKillsToIncreaseSpawnCount){
+            isSpawning = false;
             totalKill = 0;
             defaultSpawnCount = spawnCount + (spawnCountMultiplier * multiplierIncreaseCount);
             multiplierIncreaseCount++;
