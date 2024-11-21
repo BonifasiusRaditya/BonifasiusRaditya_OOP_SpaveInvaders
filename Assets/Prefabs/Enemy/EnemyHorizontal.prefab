@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 278b4c33c6035401295a9d476a18602a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 3
+  level: 1
   option: 1
   combatmanager: {fileID: 0}
   spawner: {fileID: 0}
@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ceb6df3bf85e42358b5d358ed515dbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 20
   Health: 0
 --- !u!70 &4338725204680696709
 CapsuleCollider2D:

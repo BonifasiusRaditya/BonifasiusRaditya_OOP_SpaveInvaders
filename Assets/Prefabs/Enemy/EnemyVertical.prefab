@@ -134,7 +134,7 @@ MonoBehaviour:
   option: 2
   combatmanager: {fileID: 0}
   spawner: {fileID: 0}
-  speed: 1
+  speed: 2
 --- !u!114 &-1092221475384877118
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -20,11 +20,5 @@ public class EnemyFollow : Enemy
         }
         getKilled();
     }
-
-    void getKilled(){
-        if(GetComponent<HitboxComponent>().health.Health <= 5){
-            spawner.getKilled();
-            combatmanager.totalEnemies--;
-        }
-    }
+    
 }

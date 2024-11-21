@@ -15,14 +15,8 @@ public class EnemyHorizontal : Enemy
     void selfDestruct(){
         Vector2 min = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
         if(transform.position.x < min.x){
+            StartCoroutine(spawner.Enemies());
             Destroy(gameObject);
-        }
-    }
-
-    void getKilled(){
-        if(GetComponent<HitboxComponent>().health.Health <= 5){
-            spawner.getKilled();
-            combatmanager.totalEnemies--;
         }
     }
 }

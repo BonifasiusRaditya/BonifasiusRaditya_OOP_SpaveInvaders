@@ -6,7 +6,7 @@ public class CombatManager : MonoBehaviour
 {
     public EnemySpawner[] enemySpawners;
     public float timer = 0;
-    [SerializeField] private float waveInterval = 5f;
+    [SerializeField] private float interval = 5f;
     public int waveNumber = 1;
     public int totalEnemies = 0;
 
@@ -16,12 +16,10 @@ public class CombatManager : MonoBehaviour
     private void Update(){
         if(totalEnemies <= 0 || waveNumber == 0){
             timer += Time.deltaTime;
-            if(timer >= waveInterval){
-                StartNewWave();
-            }
+            if(timer >= interval) NewWave();
         }
     }
-    private void StartNewWave(){
+    private void NewWave(){
         timer = 0;
         waveNumber++;
         totalEnemies = 0;

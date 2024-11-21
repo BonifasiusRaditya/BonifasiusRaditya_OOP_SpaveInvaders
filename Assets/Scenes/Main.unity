@@ -561,7 +561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnedEnemy: {fileID: 997928268968413512, guid: d205d7bca516d4309997fc96a28e2eec, type: 3}
-  minimumKillsToIncreaseSpawnCount: 3
+  minimumKillsToIncreaseSpawnCount: 2
   totalKill: 0
   spawnInterval: 3
   spawnCount: 0
@@ -653,7 +653,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnedEnemy: {fileID: -5039573421455819470, guid: 9b56c8e970df149568854458b1a3e216, type: 3}
-  minimumKillsToIncreaseSpawnCount: 3
+  minimumKillsToIncreaseSpawnCount: 1
   totalKill: 0
   spawnInterval: 3
   spawnCount: 0
@@ -745,7 +745,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnedEnemy: {fileID: 2381222174239230676, guid: 9f973c12be6784fafae6198b18533222, type: 3}
-  minimumKillsToIncreaseSpawnCount: 3
+  minimumKillsToIncreaseSpawnCount: 1
   totalKill: 0
   spawnInterval: 3
   spawnCount: 0
@@ -837,7 +837,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnedEnemy: {fileID: -3330770098537542429, guid: b7cfa8a58e1fc47a08089addc8bdcc4e, type: 3}
-  minimumKillsToIncreaseSpawnCount: 3
+  minimumKillsToIncreaseSpawnCount: 2
   totalKill: 0
   spawnInterval: 3
   spawnCount: 0

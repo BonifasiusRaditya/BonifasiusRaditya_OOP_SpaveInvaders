@@ -15,6 +15,14 @@ public class Enemy : MonoBehaviour
 
     // Update is called once per frame
     void Update(){
+        
+    }
+
+    public void getKilled(){
+        if(GetComponent<HitboxComponent>().health.Health <= 5){
+            spawner.getKilled();
+            combatmanager.totalEnemies--;
+        }
     }
 
     public void EnemyMove(float speed_horizontal, float speed_vertical){
