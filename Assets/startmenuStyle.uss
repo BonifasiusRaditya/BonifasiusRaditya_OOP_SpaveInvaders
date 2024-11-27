@@ -1,0 +1,9 @@
+.header {
+    color: rgb(255, 255, 255);
+    -unity-font-style: bold;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("project://database/Assets/Screenshot%202024-11-26%20at%2009.33.17.png?fileID=2800000&guid=0a076da1f900d4da99e4b4d7dd13aae3&type=3#Screenshot 2024-11-26 at 09.33.17");
+    -unity-text-align: upper-left;
+    top: 83px;
+    font-size: 10px;
+}

@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/startmenuStyle.uss?fileID=7433441132597879392&amp;guid=d06fdd78e1e464ee8b21cde3fee22b69&amp;type=3#startmenuStyle" />
+    <ui:VisualElement style="flex-grow: 1;">
+        <ui:Label tabindex="-1" text="SPACE INVADERS" parse-escape-sequences="true" display-tooltip-when-elided="true" name="SpaceInvaders" class="header" style="height: 22px; background-image: none; top: 4px; width: 356px; -unity-text-align: upper-center; left: -1px;" />
+        <ui:Label tabindex="-1" text="Click Anywhere to Start . . ." parse-escape-sequences="true" display-tooltip-when-elided="true" name="ClickButton" style="color: rgb(255, 255, 255); -unity-text-align: upper-center; font-size: 7px; top: 145px; width: 356px; left: -1px;" />
+    </ui:VisualElement>
+</ui:UXML>

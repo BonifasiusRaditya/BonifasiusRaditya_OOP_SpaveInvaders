@@ -8,9 +8,9 @@ public class Enemy : MonoBehaviour
     public int option;
     public CombatManager combatmanager;
     public EnemySpawner spawner;
+    public int point;
 
     void Start(){
-        //Invoke ("SpawnEnemy", spawnDelay);
     }
 
     // Update is called once per frame
@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
     public void getKilled(){
         if(GetComponent<HitboxComponent>().health.Health <= 5){
             spawner.getKilled();
-            combatmanager.totalEnemies--;
+            combatmanager.getKilled();
         }
     }
 
@@ -31,43 +31,4 @@ public class Enemy : MonoBehaviour
         pos += transform.rotation * velocity;
         transform.position = pos;
     }
-
-    /*void SpawnEnemy(){
-        Vector2 min = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
-        Vector2 max = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));
-        GameObject enemy = (GameObject)Instantiate(prefab);
-        if(option == 1){
-            enemy.transform.position = new Vector2(max.x, Random.Range(min.y + (max.y - min.y) / 2, max.y));
-            ScheduleNextEnemySpawn();
-        }
-        else if(option == 2){
-            enemy.transform.position = new Vector2(Random.Range(min.x + (max.x - min.x) / 2, max.x), max.y);
-            ScheduleNextEnemySpawn();
-        }
-        else if(option == 3){
-            enemy.transform.position = new Vector2(Random.Range(min.x + (max.x - min.x) / 2, max.x), Random.Range(min.y + (max.y - min.y) / 2, max.y));
-        }
-        else{
-            enemy.transform.position = new Vector2(max.x, Random.Range(min.y + (max.y - min.y) / 2, max.y));
-        }
-    }
-
-    void ScheduleNextEnemySpawn(){
-        float spawnInNSeconds;
-        if(spawnDelay > 1){
-            spawnInNSeconds = Random.Range(1, spawnDelay);
-        }else{
-            spawnInNSeconds = 1;
-        }
-        Invoke("SpawnEnemy", spawnInNSeconds);
-    }
-
-    void increaseSpawnRate(){
-        if(spawnDelay > 1){
-            spawnDelay--;
-        }
-        if(spawnDelay == 1){
-            CancelInvoke("increaseSpawnRate");
-        }
-    }*/
 }

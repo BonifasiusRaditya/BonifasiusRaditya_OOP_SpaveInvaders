@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/statusStyle.uss?fileID=7433441132597879392&amp;guid=9dfc5592a1f0a4c18ba3a5e643bf68e1&amp;type=3#statusStyle" />
+    <ui:VisualElement style="flex-grow: 1;">
+        <ui:Label tabindex="-1" text="Health" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Health" class="status" style="-unity-text-outline-color: rgba(255, 255, 255, 0);" />
+        <ui:Label tabindex="-1" text="Points" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Points" class="status" style="top: auto;" />
+        <ui:Label tabindex="-1" text="Wave" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Wave" class="status" />
+        <ui:Label tabindex="-1" text="Total Enemies" parse-escape-sequences="true" display-tooltip-when-elided="true" name="TotalEnemies" class="status" />
+    </ui:VisualElement>
+</ui:UXML>

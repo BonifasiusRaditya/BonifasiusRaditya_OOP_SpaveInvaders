@@ -15,18 +15,21 @@ public class WeaponPickup : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other){
         if(!other.CompareTag("Player") || weapon == null) return;
-        Debug.Log("Weapon has ben picked up");
+        Debug.Log("Weapon has been picked up");
 
-        Weapon PickUpWeapon = other.GetComponentInChildren<Weapon>();
-        if (PickUpWeapon != null) PickUpWeapon.gameObject.SetActive(false);
+        Weapon currentWeapon = other.GetComponentInChildren<Weapon>();
+        if(currentWeapon != null) {
+            Destroy(currentWeapon.gameObject);
+        }
 
         Weapon newWeapon = Instantiate(weapon, other.transform.position, Quaternion.identity);
         newWeapon.transform.SetParent(other.transform);
         newWeapon.transform.localPosition = new Vector3(0, 0, 1);
         newWeapon.gameObject.SetActive(true);
+
+        TurnVisual(false);
     }
 
-    
     void TurnVisual(bool on){
         weapon.gameObject.SetActive(on);
     }

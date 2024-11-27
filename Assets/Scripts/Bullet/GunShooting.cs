@@ -16,9 +16,9 @@ public class GunShooting : MonoBehaviour
     void Update(){
         cooldownTimer -= Time.deltaTime;
         if(cooldownTimer <= 0){
-            //Debug.Log("Shoot");
             cooldownTimer = fireDelay;
-            Instantiate(prefab, transform.position, transform.rotation);
+            Vector3 spawnPosition = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
+            Instantiate(prefab, spawnPosition, transform.rotation);
         }
     }
 }

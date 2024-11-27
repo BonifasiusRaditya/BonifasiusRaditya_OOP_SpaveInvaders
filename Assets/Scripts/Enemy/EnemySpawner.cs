@@ -8,16 +8,13 @@ public class EnemySpawner : MonoBehaviour
     public Enemy spawnedEnemy;
     [SerializeField] private int minimumKillsToIncreaseSpawnCount;
     public int totalKill = 0;
-    private int totalKillWave = 0;
     [SerializeField] private float spawnInterval = 3f;
     [Header("Spawned Enemies Counter")]
     public int spawnCount = 0;
     public int defaultSpawnCount = 1;
     public int spawnCountMultiplier = 1;
     public int multiplierIncreaseCount = 1;
-
     public CombatManager combatManager;
-
     public bool isSpawning = false;
 
     private void Start(){
@@ -26,6 +23,7 @@ public class EnemySpawner : MonoBehaviour
     }
 
     public void Begin(){
+        totalKill = 0;
         spawnCount = defaultSpawnCount;
         minimumKillsToIncreaseSpawnCount = defaultSpawnCount;
         if(!isSpawning && spawnedEnemy.level <= combatManager.waveNumber){
@@ -37,7 +35,7 @@ public class EnemySpawner : MonoBehaviour
     }
 
     public IEnumerator Enemies(){
-        for(int i = 0; i < spawnCount; i++){
+        for(int i = 0; i < defaultSpawnCount; i++){
             SpawnEnemy();
             yield return new WaitForSeconds(spawnInterval);
         }
@@ -58,11 +56,12 @@ public class EnemySpawner : MonoBehaviour
     }
 
     public void getKilled(){
+        spawnCount--;
         totalKill++;
+        combatManager.point += spawnedEnemy.level;
         if(totalKill == minimumKillsToIncreaseSpawnCount){
             isSpawning = false;
-            totalKill = 0;
-            defaultSpawnCount = spawnCount + (spawnCountMultiplier * multiplierIncreaseCount);
+            defaultSpawnCount = defaultSpawnCount + (spawnCountMultiplier * multiplierIncreaseCount);
             multiplierIncreaseCount++;
         }
     }

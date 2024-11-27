@@ -1,0 +1,4 @@
+.status {
+    font-size: 6px;
+    color: rgb(255, 255, 255);
+}

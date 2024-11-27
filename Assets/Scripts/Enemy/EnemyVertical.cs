@@ -4,10 +4,9 @@ public class EnemyVertical : Enemy
 {
     public float speed;
     void Start(){
-        level = 1;
     }
 
-    void Update(){
+    public void Update(){
         EnemyMove(0, speed);
         selfDestruct();
         getKilled();
