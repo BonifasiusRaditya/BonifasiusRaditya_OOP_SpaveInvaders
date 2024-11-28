@@ -1,4 +1,5 @@
 .status {
     font-size: 6px;
     color: rgb(255, 255, 255);
+    -unity-font: url("project://database/Assets/Prefabs/YuseiMagic-Regular.ttf?fileID=12800000&guid=10c553d1eca69492a8e9ce82732278c9&type=3#YuseiMagic-Regular");
 }

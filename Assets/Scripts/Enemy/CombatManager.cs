@@ -10,16 +10,19 @@ public class CombatManager : MonoBehaviour
     public int waveNumber = 1;
     public int totalEnemies = 0;
     public int point = 0;
-
-    private void Start(){
-    }
+    public bool intervalWave = false;
 
     private void Update(){
         if(totalEnemies <= 0 || waveNumber == 0){
             timer += Time.deltaTime;
-            if(timer >= interval) NewWave();
+            intervalWave = true;
+            if(timer >= interval){
+                NewWave();
+                intervalWave = false;
+            }
         }
     }
+
     private void NewWave(){
         timer = 0;
         waveNumber++;
